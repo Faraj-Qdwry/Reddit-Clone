@@ -2,6 +2,7 @@
 <layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="topic"
             type="com.example.redditclone.models.Topic" />
@@ -21,9 +22,9 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@{topic.content}"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:text="@{topic.content}"
             tools:text="this is one of the coolest topics out there" />
 
         <LinearLayout
@@ -33,11 +34,13 @@
             android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
+
             <ImageButton
-                android:id="@+id/up_vote"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@android:drawable/arrow_up_float" />
+                android:id="@+id/down_vote"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:drawable/arrow_down_float" />
 
             <TextView
                 android:id="@+id/votes"
@@ -45,16 +48,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:setVotes="@{topic.votes}"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:setVotes="@{topic.votes}"
                 tools:text="10" />
 
             <ImageButton
-                android:id="@+id/down_vote"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@android:drawable/arrow_down_float" />
+                android:id="@+id/up_vote"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:drawable/arrow_up_float" />
 
         </LinearLayout>
 
