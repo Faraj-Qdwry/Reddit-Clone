@@ -1,9 +1,10 @@
 package com.example.redditclone.viewmodel
 
+import androidx.lifecycle.ViewModel
 import com.example.redditclone.common.CashManager
 import com.example.redditclone.models.Topic
 
-class TopicsViewModel {
+class TopicsViewModel : ViewModel() {
 
     /**
      * Always return a list of top 20 topics (sorted by upvotes, descending)

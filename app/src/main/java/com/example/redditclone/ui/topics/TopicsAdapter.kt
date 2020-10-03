@@ -56,7 +56,7 @@ class TopicsAdapter(
                 onDownVoteClicked(viewBinding.topic?.id!!)
             }
 
-            itemView.setOnClickListener {
+            viewBinding.content.setOnClickListener {
                 itemView.context.startActivity(
                     Intent(
                         itemView.context, TopicDetailsActivity::class.java
