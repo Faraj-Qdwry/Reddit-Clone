@@ -36,10 +36,6 @@ class AddTopicActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
             override fun onTextChanged(text: CharSequence, start: Int, before: Int, count: Int) {
                 binding.charCount = text.length
-                if (text.length > 255) {
-                    binding.topicEditText.setText(text.substring(0, 255))
-                    binding.topicEditText.error = "text limit reached!"
-                }
             }
         })
     }

@@ -16,7 +16,7 @@ class TopicsAdapter(
     private val onDownVoteClicked: (id: Int) -> Unit
 ) : RecyclerView.Adapter<TopicsAdapter.ViewHolder>() {
 
-    private val TopicsList = ArrayList<Topic>()
+    private val topicsList = ArrayList<Topic>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -29,16 +29,16 @@ class TopicsAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(TopicsList[position])
+        holder.bind(topicsList[position])
     }
 
     fun setData(list: List<Topic>) {
-        this.TopicsList.clear()
-        this.TopicsList.addAll(list)
+        this.topicsList.clear()
+        this.topicsList.addAll(list)
         notifyDataSetChanged()
     }
 
-    override fun getItemCount(): Int = TopicsList.size
+    override fun getItemCount(): Int = topicsList.size
 
     class ViewHolder(
         private val viewBinding: TopicItemViewBinding,
