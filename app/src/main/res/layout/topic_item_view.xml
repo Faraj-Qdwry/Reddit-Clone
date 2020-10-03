@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="topic"
+            type="com.example.redditclone.models.Topic" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/topics_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@{topic.content}"
+            tools:text="this is one of the coolest topics out there" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/up_vote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:drawable/arrow_up_float" />
+
+            <TextView
+                android:id="@+id/votes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:setVotes="@{topic.votes}"
+                tools:text="10" />
+
+            <ImageButton
+                android:id="@+id/down_vote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:drawable/arrow_down_float" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

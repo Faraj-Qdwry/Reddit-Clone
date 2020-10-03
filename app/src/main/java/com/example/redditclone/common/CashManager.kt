@@ -4,5 +4,5 @@ import com.example.redditclone.models.Topic
 
 object CashManager {
     @JvmStatic
-    val topicsBinding = ArrayList<Topic>()
+    val topicsList = ArrayList<Topic>()
 }
