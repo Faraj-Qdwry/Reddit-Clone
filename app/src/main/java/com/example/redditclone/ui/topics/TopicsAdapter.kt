@@ -1,5 +1,6 @@
-package com.example.redditclone.topics
+package com.example.redditclone.ui.topics
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -7,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.redditclone.R
 import com.example.redditclone.databinding.TopicItemViewBinding
 import com.example.redditclone.models.Topic
+import com.example.redditclone.ui.topicsdetails.TopicDetailsActivity
+import com.example.redditclone.ui.topicsdetails.TopicDetailsActivity.Companion.TOPIC_ID
 
 class TopicsAdapter(
     private val onUpVoteClicked: (id: Int) -> Unit,
@@ -48,8 +51,18 @@ class TopicsAdapter(
             viewBinding.upVote.setOnClickListener {
                 onUpVoteClicked(viewBinding.topic?.id!!)
             }
+
             viewBinding.downVote.setOnClickListener {
                 onDownVoteClicked(viewBinding.topic?.id!!)
+            }
+
+            itemView.setOnClickListener {
+                itemView.context.startActivity(
+                    Intent(
+                        itemView.context, TopicDetailsActivity::class.java
+                    ).apply {
+                        putExtra(TOPIC_ID, viewBinding.topic?.id)
+                    })
             }
         }
 

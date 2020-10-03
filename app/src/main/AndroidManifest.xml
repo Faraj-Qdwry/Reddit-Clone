@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddTopicActivity"></activity>
-        <activity android:name=".details.TopicDetails" />
-        <activity android:name=".topics.TopicsActivity">
+        <activity android:name=".ui.addtopics.AddTopicActivity"></activity>
+        <activity android:name="com.example.redditclone.ui.topicsdetails.TopicDetailsActivity" />
+        <activity android:name="com.example.redditclone.ui.topics.TopicsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

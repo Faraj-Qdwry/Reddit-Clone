@@ -1,10 +1,10 @@
-package com.example.redditclone.topics
+package com.example.redditclone.ui.topics
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.redditclone.AddTopicActivity
+import com.example.redditclone.ui.addtopics.AddTopicActivity
 import com.example.redditclone.R
 import com.example.redditclone.databinding.ActivityTopicsBinding
 import com.example.redditclone.viewmodel.TopicsViewModel

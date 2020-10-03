@@ -1,10 +1,11 @@
-package com.example.redditclone
+package com.example.redditclone.ui.addtopics
 
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.redditclone.R
 import com.example.redditclone.databinding.ActivityAddTopicBinding
 import com.example.redditclone.models.Topic
 import com.example.redditclone.viewmodel.TopicsViewModel

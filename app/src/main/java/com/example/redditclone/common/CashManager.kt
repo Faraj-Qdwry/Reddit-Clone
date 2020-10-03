@@ -4,5 +4,5 @@ import com.example.redditclone.models.Topic
 
 object CashManager {
     @JvmStatic
-    val topicsList = HashMap<Int, Topic>()
+    val topicsMap = HashMap<Int, Topic>()
 }
