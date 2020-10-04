@@ -44,8 +44,7 @@ class TopicsAdapter(
         private val viewBinding: TopicItemViewBinding,
         onUpVoteClicked: (id: Int) -> Unit,
         onDownVoteClicked: (id: Int) -> Unit
-    ) :
-        RecyclerView.ViewHolder(viewBinding.root) {
+    ) : RecyclerView.ViewHolder(viewBinding.root) {
 
         init {
             viewBinding.upVote.setOnClickListener {

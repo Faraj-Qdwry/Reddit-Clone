@@ -8,6 +8,7 @@ import com.example.redditclone.databinding.ActivityTopicDetailsBinding
 import com.example.redditclone.viewmodel.TopicsViewModel
 
 class TopicDetailsActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityTopicDetailsBinding
     private val topicsViewModel by lazy { TopicsViewModel() }
 

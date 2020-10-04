@@ -13,10 +13,16 @@ class TopicsViewModel : ViewModel() {
         return CashManager.topicsMap.values.toList().sortedByDescending { it.votes }.take(20)
     }
 
+    /**
+     * upVote a topic by id
+     * */
     fun upVote(id: Int) {
         CashManager.topicsMap[id] = CashManager.topicsMap[id]!!.apply { votes++ }
     }
 
+    /**
+     * downVote a topic by id
+     * */
     fun downVote(id: Int) {
         CashManager.topicsMap[id] = CashManager.topicsMap[id]!!.apply { if (votes > 0) votes-- }
     }
@@ -25,6 +31,9 @@ class TopicsViewModel : ViewModel() {
         CashManager.topicsMap[topic.id] = topic
     }
 
+    /**
+     * retrieves a single topic
+     * */
     fun getTopic(id: Int): Topic? {
         return CashManager.topicsMap[id]
     }
